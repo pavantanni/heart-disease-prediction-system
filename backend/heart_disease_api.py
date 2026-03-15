@@ -194,7 +194,8 @@ class BatchPredictionResponse(BaseModel):
 
 # ── Model loading ───────────────────────────────────────────
 
-MODEL_DIR = os.getenv("MODEL_DIR", "../models")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODEL_DIR = os.path.join(BASE_DIR, "models")
 
 def load_artifacts():
     try:
