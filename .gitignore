@@ -13,3 +13,5 @@ models/
 
 # Environment
 .env
+
+.vscode/
