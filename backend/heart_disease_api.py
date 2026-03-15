@@ -194,9 +194,8 @@ class BatchPredictionResponse(BaseModel):
 
 # ── Model loading ───────────────────────────────────────────
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_DIR = os.path.join(BASE_DIR, "models")
-
+MODEL_DIR = os.path.join(os.path.dirname(__file__), "../models")
+MODEL_DIR = os.path.abspath(MODEL_DIR)
 
 print("MODEL DIR:", MODEL_DIR)
 print("FILES:", os.listdir(MODEL_DIR) if os.path.exists(MODEL_DIR) else "NOT FOUND")
