@@ -20,7 +20,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-API_URL = "http://localhost:8000"
+API_URL = "https://heart-disease-api-vafo.onrender.com"
 
 # color-coded risk badges and section titles
 st.markdown("""
