@@ -197,6 +197,10 @@ class BatchPredictionResponse(BaseModel):
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_DIR = os.path.join(BASE_DIR, "models")
 
+
+print("MODEL DIR:", MODEL_DIR)
+print("FILES:", os.listdir(MODEL_DIR) if os.path.exists(MODEL_DIR) else "NOT FOUND")
+
 def load_artifacts():
     try:
         model   = joblib.load(f"{MODEL_DIR}/ensemble_model.pkl")
